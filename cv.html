@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #0d0d0d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .cv-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        iframe {
+            width: 80%;
+            height: 90vh;
+            border: none;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+        .download-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #e63946;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #b22b34;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <h1>Mon CV</h1>
+        <iframe src="CV_2025-03-13_Aaron_Fadli.pdf"></iframe>
+        <a class="download-btn" href="CV_2025-03-13_Aaron_Fadli.pdf" download>Télécharger le CV</a>
+    </div>
+</body>
+</html>
