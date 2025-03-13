@@ -17,6 +17,7 @@
             color: white;
             text-align: center;
             padding: 20px;
+            position: relative;
         }
         .cv-container {
             display: flex;
@@ -44,9 +45,24 @@
         .download-btn:hover {
             background-color: #b22b34;
         }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .close-btn:hover {
+            color: #e63946;
+        }
     </style>
 </head>
 <body>
+    <button class="close-btn" onclick="window.location.href='index.html'">&times;</button>
     <div class="cv-container">
         <h1>Mon CV</h1>
         <iframe src="CV_2025-03-13_Aaron_Fadli.pdf"></iframe>
