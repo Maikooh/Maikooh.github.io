@@ -45,10 +45,14 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 20px;
+        }
+        .gallery a {
+            text-decoration: none;
+            color: white;
         }
         .gallery img {
             width: 300px;
-            margin: 10px;
             border-radius: 10px;
             transition: transform 0.3s;
         }
@@ -98,9 +102,18 @@
     <section id="projects">
         <h2>Mes Projets</h2>
         <div class="gallery">
-            <img src="https://via.placeholder.com/300" alt="Projet 1">
-            <img src="https://via.placeholder.com/300" alt="Projet 2">
-            <img src="https://via.placeholder.com/300" alt="Projet 3">
+            <a href="projets/projet1/index.html" target="_blank">
+                <img src="projets/projet1/preview.png" alt="Projet 1">
+                <p>Projet 1</p>
+            </a>
+            <a href="projets/projet2/index.html" target="_blank">
+                <img src="projets/projet2/preview.png" alt="Projet 2">
+                <p>Projet 2</p>
+            </a>
+            <a href="projets/projet3/index.html" target="_blank">
+                <img src="projets/projet3/preview.png" alt="Projet 3">
+                <p>Projet 3</p>
+            </a>
         </div>
     </section>
     
