@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
         body {
-            background-color: #111;
+            background-color: #0d0d0d;
             color: white;
             text-align: center;
-        }
-        section {
-            padding: 100px 20px;
         }
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.9);
             padding: 15px 0;
+            z-index: 1000;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #e63946;
         }
         .hero {
             height: 100vh;
@@ -40,16 +44,24 @@
             justify-content: center;
             align-items: center;
             background: url('https://via.placeholder.com/1500x800') no-repeat center/cover;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 600;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        section {
+            padding: 100px 20px;
         }
         .gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-        }
-        .gallery a {
-            text-decoration: none;
-            color: white;
         }
         .gallery img {
             width: 300px;
@@ -77,6 +89,24 @@
             background: #e63946;
             color: white;
             cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #b22b34;
+        }
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .skill {
+            background: #222;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -84,6 +114,7 @@
     <header>
         <nav>
             <a href="#about">À propos</a>
+            <a href="#skills">Compétences</a>
             <a href="#projects">Projets</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -96,13 +127,17 @@
     
     <section id="about">
         <h2>À propos</h2>
-        <p>Étudiant en licence d'économie, je souhaite poursuivre mes études en Master d'Économie.
-
-Au cours de ma formation, j'ai acquis des compétences en Statistiques, Mathématiques, Analyse de Données et Développement, que j'applique avec le langage R pour la production de rapports et analyses de données.
-
-Mon objectif est d'approfondir mes connaissances en économie, en particulier en utilisant ces outils statistiques dans la mesure du possible pour résoudre des problématiques économiques complexes et suivre la performance des projets. Je suis motivé à enrichir ma formation dans un cadre académique stimulant et à contribuer activement aux projets de formation.
-
-</p>
+        <p>Je suis un étudiant en licence d'économie, passionné par l'analyse de données et la modélisation économique...</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Compétences</h2>
+        <div class="skills">
+            <div class="skill">Statistiques</div>
+            <div class="skill">Analyse de données</div>
+            <div class="skill">Développement en R</div>
+            <div class="skill">Économie appliquée</div>
+        </div>
     </section>
     
     <section id="projects">
@@ -110,10 +145,8 @@ Mon objectif est d'approfondir mes connaissances en économie, en particulier en
         <div class="gallery">
             <a href="projets/projet1/index.html" target="_blank">
                 <img src="projets/projet1/preview.png" alt="Projet 1">
-                <p>Premier Projet :
-                Rapport d'analyse réaliser dans le cadre de l'apprentissage de la gestion et l'analyse de données avec le langage R. 
-                </p>
-     
+                <p>Projet d'analyse de données avec R.</p>
+            </a>
         </div>
     </section>
     
