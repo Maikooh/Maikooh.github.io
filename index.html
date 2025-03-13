@@ -119,14 +119,41 @@
     </section>
     
     <section id="projects">
-        <h2>Mes Projets</h2>
-        <div class="gallery">
-            <a href="projets/projet1/index.html" target="_blank">
-                <img src="projets/projet1/preview.png" alt="Projet 1">
-                <p>Projet d'analyse de données avec R.</p>
+    <h2>Mes Projets</h2>
+    <div class="gallery">
+        <div class="project-box">
+            <a href="projets/projet1/index.html">
+                <p>Projet 1 : Analyse de données</p>
             </a>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+    .gallery {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .project-box {
+        background: #222;
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 18px;
+        text-align: center;
+        transition: background 0.3s;
+    }
+    .project-box:hover {
+        background: #e63946;
+    }
+    .project-box a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
+
     
     <section id="contact">
         <h2>Contact</h2>
