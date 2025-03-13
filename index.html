@@ -57,43 +57,21 @@
         section {
             padding: 100px 20px;
         }
-        .gallery {
+        .contact-info {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            font-size: 18px;
         }
-        .gallery img {
-            width: 300px;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        .gallery img:hover {
-            transform: scale(1.1);
-        }
-        .contact-form {
-            max-width: 400px;
-            margin: auto;
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        input, textarea, button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-        }
-        button {
-            background: #e63946;
-            color: white;
-            cursor: pointer;
+        .contact-info a {
+            color: #e63946;
+            text-decoration: none;
             font-weight: 600;
-            transition: background 0.3s;
+            transition: color 0.3s;
         }
-        button:hover {
-            background: #b22b34;
+        .contact-info a:hover {
+            color: #b22b34;
         }
         .skills {
             display: flex;
@@ -152,11 +130,11 @@
     
     <section id="contact">
         <h2>Contact</h2>
-        <div class="contact-form">
-            <input type="text" placeholder="Votre Nom">
-            <input type="email" placeholder="Votre Email">
-            <textarea placeholder="Votre message"></textarea>
-            <button>Envoyer</button>
+        <div class="contact-info">
+            <p><strong>Email :</strong> <a href="mailto:aaronfadli37@gmail.com">aaronfadli37@gmail.com</a></p>
+            <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Mon LinkedIn</a></p>
+            <p><strong>YouTube :</strong> <a href="https://www.youtube.com/c/yourchannel" target="_blank">Ma chaîne YouTube</a></p>
+            <p><strong>CV :</strong> <a href="cv.html" target="_blank">Voir mon CV</a></p>
         </div>
     </section>
 </body>
