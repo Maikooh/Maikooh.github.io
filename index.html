@@ -14,153 +14,95 @@
             scroll-behavior: smooth;
         }
         body {
-            background-color: #0d0d0d;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center/cover;
             color: white;
-            text-align: center;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 15px 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #e63946;
-        }
-        .hero {
-            height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: url('https://via.placeholder.com/1500x800') no-repeat center/cover;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            height: 100vh;
+            padding: 20px;
         }
-        .hero h1 {
-            font-size: 50px;
-            font-weight: 600;
-        }
-        .hero p {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-        section {
-            padding: 100px 20px;
-        }
-        .skills {
+        .container {
             display: flex;
-            justify-content: center;
             gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 30px;
+            max-width: 1000px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
-        .skill {
-            background: #333;
-            padding: 20px;
-            border-radius: 10px;
-            font-size: 18px;
-            transition: transform 0.3s, background 0.3s;
+        .profile {
+            text-align: center;
+            flex: 1;
         }
-        .skill:hover {
-            background: #e63946;
-            transform: scale(1.1);
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
         }
-        .projects-container {
+        .profile h2 {
+            margin-top: 15px;
+        }
+        .profile p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        .social-icons {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 30px;
+            gap: 10px;
+            margin-top: 15px;
         }
-        .project-box {
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
-            width: 250px;
-            transition: transform 0.3s, background 0.3s;
-        }
-        .project-box:hover {
-            background: #e63946;
-            transform: scale(1.1);
-        }
-        .project-box a {
-            display: block;
+        .social-icons a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
-            padding: 10px;
-            border: 2px solid white;
-            border-radius: 5px;
-            margin-top: 10px;
-            transition: background 0.3s, color 0.3s;
+            padding: 8px 12px;
+            border: 1px solid white;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: 0.3s;
         }
-        .project-box a:hover {
+        .social-icons a:hover {
             background: white;
-            color: #e63946;
+            color: black;
+        }
+        .content {
+            flex: 2;
+        }
+        .box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#about">À propos</a>
-            <a href="#skills">Compétences</a>
-            <a href="#projects">Projets</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    
-    <section class="hero">
-        <h1>Bienvenue sur mon site web</h1>
-        <p>Découvrez mes réalisations et projets.</p>
-    </section>
-    
-    <section id="about">
-        <h2>À propos</h2>
-        <p>Étudiant en économie et postulant pour un Master dans le domaine, je vous partage mes productions sur ce site. N'hésitez pas à me faire un retour par mail.</p>
-    </section>
-    
-    <section id="skills">
-        <h2>Compétences</h2>
-        <div class="skills">
-            <div class="skill">Statistiques</div>
-            <div class="skill">Analyse de données</div>
-            <div class="skill">Développement en R</div>
-            <div class="skill">Économie appliquée</div>
-        </div>
-    </section>
-    
-    <section id="projects">
-        <h2>Mes Projets</h2>
-        <div class="projects-container">
-            <div class="project-box">
-                <p>Projet 1 : Rapport d'analyse de données</p>
-                <a href="projets/projet1/index.html">Voir le projet</a>
-            </div>
-            <div class="project-box">
-                <p>Projet 2 : Présentation de macroéconomie</p>
-                <a href="projets/projet2/index.html">Voir le projet</a>
+    <div class="container">
+        <div class="profile">
+            <img src="https://via.placeholder.com/100" alt="Profile">
+            <h2>Henry Case</h2>
+            <p>Étudiant en économie et passionné par l'analyse de données.</p>
+            <div class="social-icons">
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">Discord</a>
             </div>
         </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p><a href="mailto:aaronfadli37@gmail.com">aaronfadli37@gmail.com</a></p>
-            <p><a href="https://www.linkedin.com/in/aaron-f-25a75b26b/e" target="_blank">Mon LinkedIn</a></p>
-            <p><a href="cv.html" target="_blank">Voir mon CV</a></p>
+        <div class="content">
+            <div class="box">
+                <h3>Mes Projets</h3>
+                <p>Découvrez mes projets d'analyse de données et mes présentations en économie.</p>
+            </div>
+            <div class="box">
+                <h3>Compétences</h3>
+                <p>Statistiques, R, Python, Analyse économique.</p>
+            </div>
         </div>
-    </section>
+    </div>
 </body>
 </html>
