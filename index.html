@@ -57,22 +57,6 @@
         section {
             padding: 100px 20px;
         }
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            font-size: 18px;
-        }
-        .contact-info a {
-            color: #e63946;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        .contact-info a:hover {
-            color: #b22b34;
-        }
         .skills {
             display: flex;
             justify-content: center;
@@ -81,10 +65,48 @@
             margin-top: 30px;
         }
         .skill {
-            background: #222;
-            padding: 15px;
-            border-radius: 8px;
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
             font-size: 18px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .skill:hover {
+            background: #e63946;
+            transform: scale(1.1);
+        }
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .project-box {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .project-box:hover {
+            background: #e63946;
+            transform: scale(1.1);
+        }
+        .project-box a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .project-box a:hover {
+            background: white;
+            color: #e63946;
         }
     </style>
 </head>
@@ -105,7 +127,7 @@
     
     <section id="about">
         <h2>À propos</h2>
-        <p>Étudiant en économie et postulant pour un Master dans le domaine je vous partage mes productions sur ce site. N'hésitez pas à me faire un retour par mail.</p>
+        <p>Étudiant en économie et postulant pour un Master dans le domaine, je vous partage mes productions sur ce site. N'hésitez pas à me faire un retour par mail.</p>
     </section>
     
     <section id="skills">
@@ -119,51 +141,25 @@
     </section>
     
     <section id="projects">
-    <h2>Mes Projets</h2>
-    <div class="gallery">
-        <div class="project-box">
-            <a href="projets/projet1/index.html">
+        <h2>Mes Projets</h2>
+        <div class="projects-container">
+            <div class="project-box">
                 <p>Projet 1 : Rapport d'analyse de données</p>
-            </a>
-              <a href="projets/projet2/index.html">
+                <a href="projets/projet1/index.html">Voir le projet</a>
+            </div>
+            <div class="project-box">
                 <p>Projet 2 : Présentation de macroéconomie</p>
-            </a>
+                <a href="projets/projet2/index.html">Voir le projet</a>
+            </div>
         </div>
-    </div>
-</section>
-
-<style>
-    .gallery {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-    .project-box {
-        background: #222;
-        padding: 20px;
-        border-radius: 8px;
-        font-size: 18px;
-        text-align: center;
-        transition: background 0.3s;
-    }
-    .project-box:hover {
-        background: #e63946;
-    }
-    .project-box a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
-</style>
-
+    </section>
     
     <section id="contact">
         <h2>Contact</h2>
         <div class="contact-info">
-            <p><strong></strong> <a href="mailto:aaronfadli37@gmail.com">aaronfadli37@gmail.com</a></p>
-            <p><strong></strong> <a href="https://www.linkedin.com/in/aaron-f-25a75b26b/e" target="_blank">Mon LinkedIn</a></p>
-            <p><strong></strong> <a href="cv.html" target="_blank">Voir mon CV</a></p>
+            <p><a href="mailto:aaronfadli37@gmail.com">aaronfadli37@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/in/aaron-f-25a75b26b/e" target="_blank">Mon LinkedIn</a></p>
+            <p><a href="cv.html" target="_blank">Voir mon CV</a></p>
         </div>
     </section>
 </body>
