@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Portfolio - Visuellement Amélioré</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -17,119 +17,74 @@
             background-color: #0d0d0d;
             color: white;
             text-align: center;
-        }
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            padding: 15px 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #e63946;
+            overflow-x: hidden;
         }
         .hero {
-            height: 100vh;
+            height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             background: url('https://via.placeholder.com/1500x800') no-repeat center/cover;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            color: #f4a261;
         }
         .hero h1 {
-            font-size: 50px;
-            font-weight: 600;
+            font-size: 70px;
+            margin-bottom: 15px;
         }
         .hero p {
-            font-size: 20px;
-            margin-top: 10px;
+            font-size: 22px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .hero .buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #f4a261;
+            color: #222;
+            transform: scale(1.1);
         }
         section {
-            padding: 100px 20px;
+            padding: 60px 20px;
         }
-        .skills {
+        .skills, .projects-container {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
             margin-top: 30px;
         }
-        .skill {
-            background: #333;
-            padding: 20px;
-            border-radius: 10px;
-            font-size: 18px;
-            transition: transform 0.3s, background 0.3s;
-        }
-        .skill:hover {
-            background: #e63946;
-            transform: scale(1.1);
-        }
-        .projects-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        .project-box {
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
-            width: 250px;
-            transition: transform 0.3s, background 0.3s;
-        }
-        .project-box:hover {
-            background: #e63946;
-            transform: scale(1.1);
-        }
-        .project-box a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px;
-            border: 2px solid white;
-            border-radius: 5px;
-            margin-top: 10px;
-            transition: background 0.3s, color 0.3s;
-        }
-        .project-box a:hover {
-            background: white;
-            color: #e63946;
-        }
+        .skill, .project-box { background: #222; color: white; padding: 20px; border-radius: 10px; width: 200px; box-shadow: 0px 4px 10px rgba(0,0,0,0.5); transition: transform 0.3s, background 0.3s; cursor: pointer; }
+.project-box:hover { background: #f4a261; transform: scale(1.1); color: #222; }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#about">À propos</a>
-            <a href="#skills">Compétences</a>
-            <a href="#projects">Projets</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    
     <section class="hero">
-        <h1>Bienvenue sur mon site web</h1>
-        <p>Découvrez mes réalisations et projets.</p>
+        <h1>Aaron Fadli</h1>
+        <p>Étudiant en économie, passionné par l'analyse de données et l'économie appliquée.</p>
+        <div class="buttons">
+            <a href="https://www.linkedin.com/in/tonprofil" class="button">LinkedIn</a>
+            <a href="CV.pdf" class="button">Télécharger le CV</a>
+            <a href="mailto:aaronfadli37@gmail.com" class="button">Me Contacter</a>
+        </div>
     </section>
-    
-    <section id="about">
-        <h2>À propos</h2>
-        <p>Étudiant en économie et postulant pour un Master dans le domaine, je vous partage mes productions sur ce site. N'hésitez pas à me faire un retour par mail.</p>
-    </section>
-    
+
     <section id="skills">
         <h2>Compétences</h2>
         <div class="skills">
@@ -139,27 +94,12 @@
             <div class="skill">Économie appliquée</div>
         </div>
     </section>
-    
+
     <section id="projects">
         <h2>Mes Projets</h2>
         <div class="projects-container">
-            <div class="project-box">
-                <p>Projet 1 : Rapport d'analyse de données</p>
-                <a href="projets/projet1/index.html">Voir le projet</a>
-            </div>
-            <div class="project-box">
-                <p>Projet 2 : Présentation de macroéconomie</p>
-                <a href="projets/projet2/index.html">Voir le projet</a>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p><a href="mailto:aaronfadli37@gmail.com">aaronfadli37@gmail.com</a></p>
-            <p><a href="https://www.linkedin.com/in/aaron-f-25a75b26b/e" target="_blank">Mon LinkedIn</a></p>
-            <p><a href="cv.html" target="_blank">Voir mon CV</a></p>
+            <div class="project-box">Projet 1 : Rapport d'analyse de données</div>
+            <div class="project-box">Projet 2 : Présentation de macroéconomie</div>
         </div>
     </section>
 </body>
