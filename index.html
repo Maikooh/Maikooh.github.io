@@ -53,10 +53,18 @@
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
             color: #f4a261;
         }
+
         .hero h1 {
             font-size: 70px;
             margin-bottom: 15px;
         }
+.hero-text {
+            font-size: 22px;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
         .hero p {
             font-size: 22px;
             margin-bottom: 30px;
@@ -130,6 +138,20 @@
             transform: translateY(-5px);
             box-shadow: 0px 6px 20px rgba(0,0,0,0.8);
         }
+.contact-icons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .contact-icons a img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s;
+        }
+        .contact-icons a img:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -173,13 +195,16 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
+      <section id="contact" class="section">
         <h2>Contact</h2>
         <p>Vos retours sont les bienvenus ! N'hésitez pas à me contacter via les liens ci-dessous :</p>
-        <div class="buttons">
-            <a href="https://www.linkedin.com/in/aaron-f-25a75b26b/" target="_blank">Mon LinkedIn</a>
-            <a href="cv.html" target="_blank">Voir mon CV</a>
-            <a href="mailto:aaronfadli37@gmail.com">Me Contacter</a>
+        <div class="contact-icons">
+            <a href="https://www.linkedin.com/in/aaron-f-25a75b26b/" target="_blank">
+                <img src="https://media.discordapp.net/attachments/961767348258365500/1353451126279897160/linkedin.png?ex=67e1b316&is=67e06196&hm=b856ba9d649cbe289000d34518fad9e3fc2a641668548385d8868316c331c95e&=&format=webp&quality=lossless&width=930&height=930" alt="LinkedIn">
+            </a>
+            <a href="mailto:aaronfadli37@gmail.com">
+                <img src="https://media.discordapp.net/attachments/961767348258365500/1353450792945713213/mail.png?ex=67e1b2c6&is=67e06146&hm=fd6076d26b88a6b5dbb522c45831769332d8e847d71354a28b482c5693b99bf6&=&format=webp&quality=lossless&width=281&height=281" alt="Email">
+            </a>
         </div>
     </section>
 </body>
