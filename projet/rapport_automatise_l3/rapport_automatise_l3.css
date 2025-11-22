@@ -1,0 +1,362 @@
+:root {
+  /* === COULEURS PRINCIPALES === */
+  --bg-primary: #0f0a1e;
+  --bg-secondary: #1a1229;
+  --bg-card: rgba(42, 31, 61, 0.8);
+
+  /* === COULEURS D'ACCENT === */
+  --accent-primary: #ff6b35;
+  --accent-secondary: #f7931e;
+  --accent-tertiary: #ffd23f;
+  --accent-glow: rgba(255, 107, 53, 0.4);
+
+  /* === COULEURS DE TEXTE === */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --text-muted: rgba(255, 255, 255, 0.7);
+
+  /* === ESPACEMENTS RESPONSIVES === */
+  --container-padding: clamp(1.5rem, 5vw, 4rem);
+  --section-gap: clamp(2rem, 5vw, 4rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    135deg,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 100%
+  );
+  color: var(--text-primary);
+  min-height: 100vh;
+  padding: var(--container-padding);
+  line-height: 1.6;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Effet de fond animé */
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 107, 53, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(247, 147, 30, 0.08) 0%,
+      transparent 50%
+    );
+  z-index: -1;
+  animation: backgroundMove 20s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundMove {
+  to {
+    transform: translate(5%, 5%);
+  }
+}
+
+/* === CONTENEUR PRINCIPAL === */
+main {
+  max-width: min(1200px, 95vw);
+  margin: 0 auto;
+}
+
+/* === TITRE PRINCIPAL === */
+h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  letter-spacing: -0.02em;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: clamp(-0.5rem, -1vw, -0.75rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(60px, 15vw, 120px);
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  border-radius: 2px;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === PARAGRAPHE D'INTRODUCTION === */
+p {
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  color: var(--text-muted);
+  max-width: min(800px, 90vw);
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+  text-align: justify;
+  line-height: 1.8;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  background: rgba(42, 31, 61, 0.3);
+  border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
+  border-left: 4px solid var(--accent-secondary);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: fadeInUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.2s backwards;
+}
+
+/* === GRILLE DES SOUS-PROJETS === */
+.sub-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: clamp(1rem, 3vw, 1.5rem);
+  margin: var(--section-gap) 0;
+  max-width: min(1000px, 95vw);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sub-project {
+  background: linear-gradient(135deg, var(--bg-card), rgba(26, 18, 41, 0.9));
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  border-radius: clamp(0.75rem, 1.5vw, 1rem);
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  border: 2px solid rgba(255, 107, 53, 0.15);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) backwards;
+}
+
+/* Animation décalée pour chaque card */
+.sub-project:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.sub-project:nth-child(2) {
+  animation-delay: 0.35s;
+}
+.sub-project:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.sub-project:nth-child(4) {
+  animation-delay: 0.45s;
+}
+.sub-project:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.sub-project:nth-child(6) {
+  animation-delay: 0.55s;
+}
+.sub-project:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.sub-project:nth-child(8) {
+  animation-delay: 0.65s;
+}
+.sub-project:nth-child(9) {
+  animation-delay: 0.7s;
+}
+.sub-project:nth-child(10) {
+  animation-delay: 0.75s;
+}
+
+/* Effet de brillance au survol */
+.sub-project::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 107, 53, 0.15),
+    transparent
+  );
+  transition: left 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.sub-project:hover::before {
+  left: 100%;
+}
+
+.sub-project:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
+  border-color: rgba(255, 107, 53, 0.5);
+  background: linear-gradient(
+    135deg,
+    rgba(42, 31, 61, 0.95),
+    rgba(26, 18, 41, 0.95)
+  );
+}
+
+.sub-project a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.sub-project a::after {
+  content: "→";
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  opacity: 0;
+}
+
+.sub-project:hover a::after {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+.sub-project:hover a {
+  color: var(--accent-secondary);
+}
+
+/* === CONTENEUR DES BOUTONS === */
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 3vw, 1.5rem);
+  justify-content: center;
+  margin-top: var(--section-gap);
+  animation: fadeInUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) 0.8s backwards;
+}
+
+/* === BOUTONS === */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  padding: clamp(0.875rem, 2vw, 1.125rem) clamp(1.75rem, 4vw, 2.5rem);
+  background: linear-gradient(
+    135deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  color: var(--text-primary);
+  font-size: clamp(0.875rem, 1.8vw, 1rem);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+  border: 2px solid transparent;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.back-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.back-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.back-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(255, 107, 53, 0.5);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.back-btn:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Style spécifique pour le bouton GitHub */
+.back-btn:first-of-type {
+  background: linear-gradient(135deg, #24292e, #1a1e22);
+  box-shadow: 0 10px 30px rgba(36, 41, 46, 0.4);
+}
+
+.back-btn:first-of-type:hover {
+  background: linear-gradient(135deg, #2f363d, #24292e);
+  box-shadow: 0 20px 50px rgba(36, 41, 46, 0.6);
+}
+
+/* === SÉPARATEUR === */
+br {
+  display: block;
+  margin: clamp(1rem, 3vw, 1.5rem) 0;
+}
+
+/* === ACCESSIBILITÉ === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* === FOCUS VISIBLE POUR L'ACCESSIBILITÉ === */
+a:focus-visible {
+  outline: 3px solid var(--accent-secondary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* === RESPONSIVE POUR TRÈS PETITS ÉCRANS === */
+.sub-projects {
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+}
